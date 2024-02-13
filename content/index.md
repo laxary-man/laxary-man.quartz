@@ -1,6 +1,20 @@
 ---
-title: Welcome to Quartz
+title: 코드야, 미안해
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+```
+나는 좋아하는 것을 합니다.
+나는 자주 만들어봅니다.
+나는 보통 이상한 짓을 합니다.
+나는 가끔 실수도 합니다.
+나는 거의 조용히 있질 않아요.
+나는 절대 멈추지 않습니다.
+```
+
+## 나는 누구?
+
+안녕하세요, 고급맨(laxary-man) 이라고 합니다.
+한국 이름은 '김준석'입니다.
+외국 이름은 없습니다.
+컴퓨터에 연결된 타자기로 한글 및 영어를 입력하는 능력이 있습니다.
+감사합니다.
