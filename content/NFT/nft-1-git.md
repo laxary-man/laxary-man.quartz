@@ -1,24 +1,24 @@
 ---
-title: 윈도우 환경에서 git 사용하기
+title: 1 - 윈도우 환경에서 git 사용하기
 draft: false
 tags:
   - sc-NFT
 ---
 ## 버전 관리
-일반적으로 [버전 관리(Version Control)]([Version control - Wikipedia](https://en.wikipedia.org/wiki/Version_control#Structure))란 소프트웨어의 소스 코드에 발생한 변화들을 기록하고 특정 시점의 상태를 불러오는 것을 말한다. 개발자들 사이의 협업을 통해서 한 소프트웨어의 규모가 커졌고 이런 버전 관리를 할 수 있는 버전 관리 도구의 중요성은 더욱 대두되었다. 이 중 가장 유명한 도구가 Linus Torvalds 가 개발한 '[깃(Git)]([Git - Wikipedia](https://en.wikipedia.org/wiki/Git))' 이다.
+일반적으로 [버전 관리(Version Control)](https://en.wikipedia.org/wiki/Version_control#Structure)란 소프트웨어의 소스 코드에 발생한 변화들을 기록하고 특정 시점의 상태를 불러오는 것을 말한다. 개발자들 사이의 협업을 통해서 한 소프트웨어의 규모가 커졌고 이런 버전 관리를 할 수 있는 버전 관리 도구의 중요성은 더욱 대두되었다. 이 중 가장 유명한 도구가 Linus Torvalds 가 개발한 '[깃(Git)](https://en.wikipedia.org/wiki/Git)' 이다.
 이 깃을 대중적으로 사용하는 환경인 윈도우 환경에서 사용할 수 있도록 설정하는 과정을 정리하고자 한다.
 
 ## 깃 설치
 우선은 깃을 설치해야한다.
 설치에는 대표적으로 2가지 정도의 방법이 있는데 하나는 설치 파일을 받아서 설치하는 방법이고 다른 하나는 패키지 관리자 (Package Manager) 프로그램을 사용하는 것이다.
-[깃 다운로드 페이지]([https://git-scm.com/download/](https://git-scm.com/download/))에서 설치 파일을 다운받아서 설치하는 방법은 아주 직관적이므로 정리할 필요는 없다고 생각되기 때문에, 윈도우에서 패키지 관리자를 사용하는 방법을 정리해보자.
+[깃 다운로드 페이지](https://git-scm.com/download/)에서 설치 파일을 다운받아서 설치하는 방법은 아주 직관적이므로 정리할 필요는 없다고 생각되기 때문에, 윈도우에서 패키지 관리자를 사용하는 방법을 정리해보자.
 
 ### Winget
 Winget 은 마이크로소프트에서 제공하는 윈도우용 패키지 관리자 프로그램이다. 우선은 winget 이 설치되어있는지 확인해보자.
 
 ![[윈도우 환경에서 git 사용하기-1.png]]
 
-만약 winget 이 없다면, Microsoft Store 에서 '앱 설치 관리자' 를 설치하면 된다. [Chocolatey]([Chocolatey Software | Chocolatey - The package manager for Windows](https://chocolatey.org/)) 가 익숙한 사용자라면 해당 프로그램을 사용해도 무방하다.
+만약 winget 이 없다면, Microsoft Store 에서 '앱 설치 관리자' 를 설치하면 된다. [Chocolatey](https://chocolatey.org/) 가 익숙한 사용자라면 해당 프로그램을 사용해도 무방하다.
 
 > winget install git
 
@@ -33,7 +33,7 @@ Winget 은 마이크로소프트에서 제공하는 윈도우용 패키지 관�
 위 명령어를 입력하면 자동으로 설치 파일을 다운로드하고 실행된다. 환경을 자주 바꾸는 개발자, 혹은 새로운 시스템에서 개발 환경을 새로 구축해야 하는 개발자의 경우 윈도우에서도 패키지 관리자 형태의 소프트웨어를 사용하면 조금 더 쉽게 환경을 구축할 수 있다.
 
 ## 분산 버전 관리 로컬에서 맛보기
-깃은 [분산 버전 관리]([Distributed version control - Wikipedia](https://en.wikipedia.org/wiki/Distributed_version_control)) 형태를 채택하고 있다. 완전히 깃을 처음 접한다면 조금 생소할 수 있다. 기존의 버전 관리는 중앙에 특정 버전들을 기억하고 있는 저장소가 있고 각 개발자들이 저장소에서 코드를 받아오거나 저장하도록 되어있다. 분산 버전 관리는 이 저장소라는 개념이 로컬에서도 존재한다. 소스 코드를 수정하고 이 차이를 로컬 저장소에 반영시킨 다음(깃에서 commit), 반영된 정보를 원격 저장소에다 보내는(깃에서 push) 식으로 이루어진다. 이런 개념은 서버없이 시스템 내부에서 간단하게 테스트 해볼 수 있다.
+깃은 [분산 버전 관리](https://en.wikipedia.org/wiki/Distributed_version_control) 형태를 채택하고 있다. 완전히 깃을 처음 접한다면 조금 생소할 수 있다. 기존의 버전 관리는 중앙에 특정 버전들을 기억하고 있는 저장소가 있고 각 개발자들이 저장소에서 코드를 받아오거나 저장하도록 되어있다. 분산 버전 관리는 이 저장소라는 개념이 로컬에서도 존재한다. 소스 코드를 수정하고 이 차이를 로컬 저장소에 반영시킨 다음(깃에서 commit), 반영된 정보를 원격 저장소에다 보내는(깃에서 push) 식으로 이루어진다. 이런 개념은 서버없이 시스템 내부에서 간단하게 테스트 해볼 수 있다.
 
 ### 1. 깃 시작하기
 

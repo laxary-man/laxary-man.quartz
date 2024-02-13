@@ -1,8 +1,9 @@
 ---
-title: 제목 - NFT
+title: 0 - NFT
 draft: false
 tags:
-  - sc-NFT, title
+  - sc-NFT
+  - title
 ---
 NFT - 너와 나의 FUNGIBLE THOUGHTS (NFT)
 
